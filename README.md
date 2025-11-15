@@ -15,6 +15,7 @@ cd ai6132_gen_ai_technical_review
 ```
 conda create -n ai6132_gen_ai_technical_review python=3.9
 conda activate ai6132_gen_ai_technical_review
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 
@@ -22,4 +23,10 @@ pip install -r requirements.txt
 
 ```
 python prepare_dataset.py
+```
+
+4. Run experiments
+
+```
+python run.py --model stable_diffusion --prompts data/coco/metadata.json --output_dir output/stable_diffusion
 ```
