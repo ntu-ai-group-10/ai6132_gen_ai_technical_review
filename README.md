@@ -17,3 +17,9 @@ conda create -n ai6132_gen_ai_technical_review python=3.9
 conda activate ai6132_gen_ai_technical_review
 pip install -r requirements.txt
 ```
+
+3. Prepare dataset
+
+```
+python prepare_dataset.py
+```
