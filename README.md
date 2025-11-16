@@ -28,5 +28,5 @@ python prepare_dataset.py
 4. Run experiments
 
 ```
-python run.py --model stable_diffusion --prompts data/coco/metadata.json --output_dir output/stable_diffusion
+python run.py --model stable_diffusion --prompts data/coco/metadata.json --output_dir output/stable_diffusion --sample_count 100
 ```

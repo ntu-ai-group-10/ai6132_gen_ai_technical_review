@@ -19,6 +19,11 @@ def main(args):
     #Load model class
     generator = MODEL_MAP[args.model]()
 
+    # Apply sample count
+    if args.sample_count is not None:
+        prompts = prompts[:args.sample_count]
+        print(f"Using only the first {args.sample_count} samples.")
+
     #Generate images for each prompt
     for item in prompts:
         img_id = item["id"]
@@ -51,7 +56,8 @@ if __name__ == "__main__":
     parser.add_argument("--model", type=str, required=True)
     parser.add_argument("--prompts", type=str, required=True)
     parser.add_argument("--output_dir", type=str)
-    parser.add_argument("--caption_strategy", type=str, default="all", choices=["first", "random", "all"], help="Choose how to pick captions")
+    parser.add_argument("--caption_strategy", type=str, default="first", choices=["first", "random", "all"], help="Choose how to pick captions")
+    parser.add_argument("--sample_count", type=int, default=None, help="Number of prompt samples to process")
     args = parser.parse_args()
 
     main(args)
