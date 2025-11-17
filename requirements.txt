@@ -74,7 +74,6 @@ nest-asyncio==1.6.0
 notebook==7.4.7
 notebook_shim==0.2.4
 overrides==7.7.0
-packaging==25.0
 pandas==2.3.3
 pandocfilters==1.5.1
 parso==0.8.5
@@ -117,6 +116,7 @@ tinycss2==1.4.0
 tokenizers==0.22.1
 tomli==2.3.0
 torch==2.5.1
+torch-fidelity==0.3.0
 torchaudio==2.5.1
 torchvision==0.20.1
 tornado==6.5.2

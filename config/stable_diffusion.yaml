@@ -1,4 +1,5 @@
 model: stable_diffusion
+input_dir: data/coco
 prompts: data/coco/metadata.json
 output_dir: output/stable_diffusion
 sample_count: 100
