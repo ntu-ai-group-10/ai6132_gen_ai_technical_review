@@ -1,10 +1,11 @@
 model: controlsd
+input_dir: data/coco
 prompts: data/coco/metadata.json
 output_dir: output/controlsd
-sample_count: 10
+sample_count: 100
 caption_strategy: first
 controlnet_enabled: 1
-image_folder: data/coco
+
 params:
   num_inference_steps: [8, 12, 20]
   guidance_scale: [1.5, 3.0, 5.0]
