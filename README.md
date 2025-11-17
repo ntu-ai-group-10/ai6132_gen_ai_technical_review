@@ -15,7 +15,7 @@ cd ai6132_gen_ai_technical_review
 ```
 conda create -n ai6132_gen_ai_technical_review python=3.9
 conda activate ai6132_gen_ai_technical_review
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install pytorch torchvision torchaudio torchmetrics pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 
@@ -29,4 +29,10 @@ python prepare_dataset.py
 
 ```
 python run.py --config config/stable_diffusion.yaml
+```
+
+5. Evaluate experiment results
+
+```
+python evaluation.py --config config/stable_diffusion.yaml
 ```
