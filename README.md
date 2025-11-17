@@ -28,5 +28,5 @@ python prepare_dataset.py
 4. Run experiments
 
 ```
-python run.py --config config/stable_diffusion.yaml
+python run.py --config config/controlsd.yaml
 ```
