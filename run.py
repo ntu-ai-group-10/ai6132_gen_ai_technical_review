@@ -110,6 +110,12 @@ def main(args):
                 out_path = os.path.join(img_output_dir, f"{idx}.png")
                 img.save(out_path)
         
+
+                # save the prompt as a text file
+                prompt_path = os.path.join(img_output_dir, f"{idx}.txt")
+                with open(prompt_path, "w+", encoding="utf-8") as f:
+                    f.write(prompt)
+
                 print(f"Saved → {out_path}")
 
 if __name__ == "__main__":
