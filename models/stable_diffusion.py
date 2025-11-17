@@ -12,7 +12,7 @@ class StableDiffusionGenerator:
     def generate(self, prompt, **kwargs):
         return self.pipe(
             prompt,
-            num_inference_steps=12,
-            guidance_scale=3.0,
-            max_sequence_length=512,
+            num_inference_steps=kwargs.get("num_inference_steps", 12),
+            guidance_scale=kwargs.get("guidance_scale", 3.0),
+            max_sequence_length=kwargs.get("max_sequence_length", 512),
         ).images[0]
