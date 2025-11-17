@@ -62,7 +62,7 @@ def main(args):
 
     is_controlnet_mode = bool(cfg.get('controlnet_enabled', 0))
 
-    IMAGE_FOLDER = cfg.get('image_folder',None)
+    IMAGE_FOLDER = cfg.get('input_dir',None)
     
     for i, params in enumerate(param_grid):
         print(f"\n=== Run {i+1}/{len(param_grid)} with params: {params} ===")
