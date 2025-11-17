@@ -52,7 +52,7 @@ def main(args):
         # Path to save evaluation results
         eval_file = os.path.join(output_dir, "evaluation.txt")
 
-        with open(eval_file, "w", encoding="utf-8") as f:
+        with open(eval_file, "a", encoding="utf-8") as f:
             f.write(f"Parameter setting: {param}\n")
             f.write(f"FID Score: {fid_score}\n")
             f.write(f"Average CLIP Score: {avg_clip_score}\n")
