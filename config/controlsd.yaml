@@ -1,7 +1,7 @@
 model: controlsd
-input_dir: data/coco
-prompts: data/coco/metadata.json
-output_dir: output/controlsd
+input_dir: data/flickr
+prompts: data/flickr/metadata.json
+output_dir: output/controlsdflickr
 sample_count: 100
 caption_strategy: first
 controlnet_enabled: 1

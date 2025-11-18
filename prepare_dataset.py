@@ -5,25 +5,26 @@ from PIL import Image
 import json
 
 if __name__ == "__main__":
-    #load dataset
-    dataset = load_dataset(
-        "lmms-lab/COCO-Caption2017",
-        split="val",
-    )
-
+    # #load dataset
+    # dataset = load_dataset(
+    #     "lmms-lab/COCO-Caption2017",
+    #     split="val",
+    # )
+    dataset= load_dataset("Adyakanta/test_flickr30k",split="test")
     #prepare output folder
-    output_dir = "data/coco"
+    output_dir = "data/flickr"
     os.makedirs(output_dir, exist_ok=True)
     
     #save images and captions
     metadata = []
+
     for i, item in enumerate(dataset):
-        id = item['file_name']
+        id = item['img_id']+'.jpg'
         image: Image.Image = item["image"]
         img_path = os.path.join(output_dir, id)
         image.save(img_path, format="JPEG")
 
-        caption = item["answer"]
+        caption = item["caption"]
         metadata.append({
             "id": id,
             "caption": caption
