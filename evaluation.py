@@ -3,7 +3,7 @@ import argparse
 import json
 import yaml
 from PIL import Image
-
+from tqdm import tqdm
 from src.evaluation_metrics import compute_fid, compute_clip_score
 
 def main(args):
@@ -24,7 +24,7 @@ def main(args):
         prompts = []
         
         #load images and prompts
-        for item in os.listdir(param_path):
+        for item in tqdm(os.listdir(param_path)):
             item_path = os.path.join(param_path, item)
             if os.path.isdir(item_path):
                 for fname in os.listdir(item_path):
